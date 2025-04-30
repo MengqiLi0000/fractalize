@@ -38,18 +38,17 @@ This is quantified by the **DFA alpha exponent**:
 ## Background: Detrended Fluctuation Analysis (DFA)
 
 DFA is a method to measure long-range correlations in non-stationary time series. Here's how it works:
+(sorry for the layout, github does not support latex rendering)
+1. **Integrate the time series**:  
+   Y(i) = Σᵢ₌₁ⁱ (xᵢ - x̄)
 
-1. **Integrate** the time series:  
-   `Y(i) = Σₖ=1ⁱ [xₖ - x̄]`
+2. **Divide into windows of length s**
 
-2. **Divide** into windows of length `s`
+3. **Fit a linear trend and subtract**:  
+   Fₛ(i) = Y(i) - yₛ(i)
 
-3. In each window, **fit a linear trend** and subtract it:  
-   `Fₛ(i) = Y(i) - yₛ(i)`
+4. **Compute RMS fluctuation**:  
+   F(s) = sqrt(1/N · Σ₁ⁿ Fₛ(i)²)
 
-4. Compute **root-mean-square fluctuation**:  
-   `F(s) = sqrt(1/N Σ₁ⁿ Fₛ(i)²)`
-
-5. Estimate `α` from the slope of the log-log plot:  
-   `log F(s) ~ α log s`
-
+5. **Estimate α** from slope of log-log plot:  
+   log F(s) ≈ α · log s
