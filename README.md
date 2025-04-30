@@ -1,5 +1,6 @@
-# fractalize
+# ```fractalize```
 Takes a numeric time series (from a ```data.frame``` or ```data.table```) and transforms it into a fractal time series
+![fractalize](https://github.com/user-attachments/assets/bc0c17bf-740d-4b6e-b059-420d025d8c0e)
 
 ## Introduction
 
